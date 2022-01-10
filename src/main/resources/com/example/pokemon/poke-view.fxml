@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1000.0" style="-fx-background-color: #7D6A87;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokemon.">
+    <children>
+        <GridPane prefHeight="353.0" prefWidth="590.0" AnchorPane.bottomAnchor="140.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <BorderPane fx:id="pane1" onMouseClicked="#onPane1Click" prefHeight="183.0" prefWidth="180.0">
+                    <bottom>
+                        <VBox prefHeight="31.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="322.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="31.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box,  #524659, 11, 1, 3, 0);" text="PS">
+                                            <textFill>
+                                                <LinearGradient endX="1.0" endY="0.12796208530805686" startX="1.0" startY="0.5497630331753555">
+                                                    <stops>
+                                                        <Stop>
+                                                            <color>
+                                                                <Color red="0.7200000286102295" green="0.5343539714813232" blue="0.31679999828338623" />
+                                                            </color>
+                                                        </Stop>
+                                                        <Stop offset="1.0">
+                                                            <color>
+                                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                                            </color>
+                                                        </Stop>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill></Label>
+                                        <ProgressBar fx:id="health_bar_1" prefHeight="17.0" prefWidth="298.0" progress="0.41" style="-fx-background-color: purple; -fx-accent: lime;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets></ProgressBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="health1" alignment="CENTER" prefHeight="17.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin></Label>
+                            </children>
+                        </VBox>
+                    </bottom>
+                    <right>
+                        <ImageView fx:id="sex1" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_CENTER">
+
+                            <BorderPane.margin>
+                                <Insets bottom="3.0" />
+                            </BorderPane.margin></ImageView>
+                    </right>
+                    <top>
+                        <AnchorPane prefHeight="23.0" prefWidth="197.0" BorderPane.alignment="TOP_CENTER">
+                            <children>
+                                <Label fx:id="name1" layoutX="33.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textFill="WHITE" AnchorPane.leftAnchor="20.0" />
+                                <Label fx:id="level1" layoutX="130.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.rightAnchor="20.0" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                    </left>
+                    <center>
+                        <HBox fx:id="cuadro1" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #524659;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imagen1" fitHeight="180.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="pane2" onMouseClicked="#onPane2Click" prefHeight="183.0" prefWidth="180.0" GridPane.columnIndex="1">
+                    <bottom>
+                        <VBox prefHeight="31.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="322.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="31.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box,  #524659, 11, 1, 3, 0);" text="PS">
+                                            <textFill>
+                                                <LinearGradient endX="1.0" endY="0.12796208530805686" startX="1.0" startY="0.5497630331753555">
+                                                    <stops>
+                                                        <Stop>
+                                                            <color>
+                                                                <Color red="0.7200000286102295" green="0.5343539714813232" blue="0.31679999828338623" />
+                                                            </color>
+                                                        </Stop>
+                                                        <Stop offset="1.0">
+                                                            <color>
+                                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                                            </color>
+                                                        </Stop>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                        </Label>
+                                        <ProgressBar fx:id="health_bar_2" prefHeight="17.0" prefWidth="298.0" progress="1.0" style="-fx-background-color: purple; -fx-accent: lime;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </ProgressBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="health2" alignment="CENTER" prefHeight="17.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </bottom>
+                    <right>
+                        <ImageView fx:id="sex2" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_CENTER">
+
+                            <BorderPane.margin>
+                                <Insets bottom="3.0" />
+                            </BorderPane.margin>
+                        </ImageView>
+                    </right>
+                    <top>
+                        <AnchorPane onMouseClicked="#onPane2Click" prefHeight="23.0" prefWidth="197.0" BorderPane.alignment="TOP_CENTER">
+                            <children>
+                                <Label fx:id="name2" layoutX="33.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textFill="WHITE" AnchorPane.leftAnchor="20.0" />
+                                <Label fx:id="level2" layoutX="130.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.rightAnchor="20.0" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                    </left>
+                    <center>
+                        <HBox fx:id="cuadro2" alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #524659;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imagen2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="pane3" onMouseClicked="#onPane3Click" prefHeight="183.0" prefWidth="180.0" GridPane.columnIndex="2">
+                    <bottom>
+                        <VBox prefHeight="31.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="322.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="31.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box,  #524659, 11, 1, 3, 0);" text="PS">
+                                            <textFill>
+                                                <LinearGradient endX="1.0" endY="0.12796208530805686" startX="1.0" startY="0.5497630331753555">
+                                                    <stops>
+                                                        <Stop>
+                                                            <color>
+                                                                <Color red="0.7200000286102295" green="0.5343539714813232" blue="0.31679999828338623" />
+                                                            </color>
+                                                        </Stop>
+                                                        <Stop offset="1.0">
+                                                            <color>
+                                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                                            </color>
+                                                        </Stop>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                        </Label>
+                                        <ProgressBar fx:id="health_bar_3" prefHeight="17.0" prefWidth="298.0" progress="1.0" style="-fx-background-color: purple; -fx-accent: lime;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </ProgressBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="health3" alignment="CENTER" prefHeight="17.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </bottom>
+                    <right>
+                        <ImageView fx:id="sex3" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_CENTER">
+
+                            <BorderPane.margin>
+                                <Insets bottom="3.0" />
+                            </BorderPane.margin>
+                        </ImageView>
+                    </right>
+                    <top>
+                        <AnchorPane prefHeight="23.0" prefWidth="197.0" BorderPane.alignment="TOP_CENTER">
+                            <children>
+                                <Label fx:id="name3" layoutX="33.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textFill="WHITE" AnchorPane.leftAnchor="20.0" />
+                                <Label fx:id="level3" layoutX="130.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.rightAnchor="20.0" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                    </left>
+                    <center>
+                        <HBox fx:id="cuadro3" alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #524659;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imagen3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="pane4" onMouseClicked="#onPane4Click" prefHeight="183.0" prefWidth="180.0" GridPane.rowIndex="1">
+                    <bottom>
+                        <VBox prefHeight="31.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="322.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="31.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box,  #524659, 11, 1, 3, 0);" text="PS">
+                                            <textFill>
+                                                <LinearGradient endX="1.0" endY="0.12796208530805686" startX="1.0" startY="0.5497630331753555">
+                                                    <stops>
+                                                        <Stop>
+                                                            <color>
+                                                                <Color red="0.7200000286102295" green="0.5343539714813232" blue="0.31679999828338623" />
+                                                            </color>
+                                                        </Stop>
+                                                        <Stop offset="1.0">
+                                                            <color>
+                                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                                            </color>
+                                                        </Stop>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                        </Label>
+                                        <ProgressBar fx:id="health_bar_4" prefHeight="17.0" prefWidth="298.0" progress="1.0" style="-fx-background-color: purple; -fx-accent: lime;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </ProgressBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="health4" alignment="CENTER" prefHeight="17.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </bottom>
+                    <right>
+                        <ImageView fx:id="sex4" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_CENTER">
+
+                            <BorderPane.margin>
+                                <Insets bottom="3.0" />
+                            </BorderPane.margin>
+                        </ImageView>
+                    </right>
+                    <top>
+                        <AnchorPane prefHeight="23.0" prefWidth="197.0" BorderPane.alignment="TOP_CENTER">
+                            <children>
+                                <Label fx:id="name4" layoutX="33.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textFill="WHITE" AnchorPane.leftAnchor="20.0" />
+                                <Label fx:id="level4" layoutX="130.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.rightAnchor="20.0" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                    </left>
+                    <center>
+                        <HBox fx:id="cuadro4" alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #524659;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imagen4" fitHeight="150.0" fitWidth="200.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="pane5" onMouseClicked="#onPane5Click" prefHeight="183.0" prefWidth="180.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <bottom>
+                        <VBox prefHeight="31.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="322.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="31.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box,  #524659, 11, 1, 3, 0);" text="PS">
+                                            <textFill>
+                                                <LinearGradient endX="1.0" endY="0.12796208530805686" startX="1.0" startY="0.5497630331753555">
+                                                    <stops>
+                                                        <Stop>
+                                                            <color>
+                                                                <Color red="0.7200000286102295" green="0.5343539714813232" blue="0.31679999828338623" />
+                                                            </color>
+                                                        </Stop>
+                                                        <Stop offset="1.0">
+                                                            <color>
+                                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                                            </color>
+                                                        </Stop>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                        </Label>
+                                        <ProgressBar fx:id="health_bar_5" prefHeight="17.0" prefWidth="298.0" progress="1.0" style="-fx-background-color: purple; -fx-accent: lime;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </ProgressBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="health5" alignment="CENTER" prefHeight="17.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </bottom>
+                    <right>
+                        <ImageView fx:id="sex5" fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_CENTER">
+
+                            <BorderPane.margin>
+                                <Insets bottom="3.0" />
+                            </BorderPane.margin>
+                        </ImageView>
+                    </right>
+                    <top>
+                        <AnchorPane prefHeight="23.0" prefWidth="197.0" BorderPane.alignment="TOP_CENTER">
+                            <children>
+                                <Label fx:id="name5" layoutX="33.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textFill="WHITE" AnchorPane.leftAnchor="20.0" />
+                                <Label fx:id="level5" layoutX="130.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.rightAnchor="20.0" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                    </left>
+                    <center>
+                        <HBox fx:id="cuadro5" alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #524659;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imagen5" fitHeight="135.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+                <BorderPane fx:id="pane6" onMouseClicked="#onPane6Click" prefHeight="183.0" prefWidth="180.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <bottom>
+                        <VBox prefHeight="31.0" prefWidth="348.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <HBox alignment="CENTER" prefHeight="30.0" prefWidth="322.0">
+                                    <children>
+                                        <Label prefHeight="20.0" prefWidth="31.0" style="-fx-font-size: 20; -fx-font-weight: bold; -fx-effect: dropshadow(one-pass-box,  #524659, 11, 1, 3, 0);" text="PS">
+                                            <textFill>
+                                                <LinearGradient endX="1.0" endY="0.12796208530805686" startX="1.0" startY="0.5497630331753555">
+                                                    <stops>
+                                                        <Stop>
+                                                            <color>
+                                                                <Color red="0.7200000286102295" green="0.5343539714813232" blue="0.31679999828338623" />
+                                                            </color>
+                                                        </Stop>
+                                                        <Stop offset="1.0">
+                                                            <color>
+                                                                <Color red="1.0" green="1.0" blue="1.0" />
+                                                            </color>
+                                                        </Stop>
+                                                    </stops>
+                                                </LinearGradient>
+                                            </textFill>
+                                        </Label>
+                                        <ProgressBar fx:id="health_bar_6" prefHeight="17.0" prefWidth="298.0" progress="1.0" style="-fx-background-color: purple; -fx-accent: lime;">
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                        </ProgressBar>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets />
+                                    </VBox.margin>
+                                </HBox>
+                                <Label fx:id="health6" alignment="CENTER" prefHeight="17.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE">
+                                    <VBox.margin>
+                                        <Insets left="10.0" />
+                                    </VBox.margin>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </bottom>
+                    <right>
+                        <ImageView fx:id="sex6" fitHeight="150.0" fitWidth="20.0" onMouseClicked="#onPane6Click" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="BOTTOM_CENTER">
+
+                            <BorderPane.margin>
+                                <Insets bottom="3.0" />
+                            </BorderPane.margin>
+                        </ImageView>
+                    </right>
+                    <top>
+                        <AnchorPane prefHeight="23.0" prefWidth="197.0" BorderPane.alignment="TOP_CENTER">
+                            <children>
+                                <Label fx:id="name6" layoutX="33.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textFill="WHITE" AnchorPane.leftAnchor="20.0" />
+                                <Label fx:id="level6" layoutX="130.0" layoutY="3.0" style="-fx-font-size: 20;" text="Label" textAlignment="JUSTIFY" textFill="WHITE" AnchorPane.rightAnchor="20.0" />
+                            </children>
+                        </AnchorPane>
+                    </top>
+                    <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </padding>
+                    <left>
+                        <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                    </left>
+                    <center>
+                        <HBox fx:id="cuadro6" alignment="CENTER" minWidth="-Infinity" prefHeight="100.0" prefWidth="200.0" style="-fx-border-color: black; -fx-border-width: 3; -fx-background-color: #524659;" BorderPane.alignment="CENTER">
+                            <children>
+                                <ImageView fx:id="imagen6" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                            </children>
+                        </HBox>
+                    </center>
+                </BorderPane>
+            </children>
+        </GridPane>
+        <HBox alignment="BOTTOM_LEFT" layoutY="613.0" prefHeight="87.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="613.0">
+            <children>
+                <Label alignment="TOP_LEFT" style="-fx-text-fill: white; -fx-font-size: 28;" text="Elegir un Pokémon" textFill="#fafafa" textOverrun="CLIP">
+                    <HBox.margin>
+                        <Insets bottom="20.0" left="30.0" />
+                    </HBox.margin>
+                </Label>
+                <Button fx:id="b_close" mnemonicParsing="false" style="-fx-background-color: #7D6A87; -fx-text-fill: white; -fx-font-size: 24;" text="SALIR">
+                    <HBox.margin>
+                        <Insets bottom="10.0" left="600.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
